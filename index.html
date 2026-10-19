@@ -1,129 +1,202 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b1020">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d1b">
 <title>Nexora AI — Discover smarter tools</title>
+<meta name="description" content="Discover AI tools for writing, images, video, study, coding and business with Nexora AI.">
 <style>
-:root{--bg:#080d1b;--panel:#111a2d;--panel2:#17233b;--text:#f4f7ff;--muted:#aab6d0;--line:#283652;--accent:#8b7cff;--accent2:#42d9c8}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0%,#20245a 0,transparent 30%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
-a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;letter-spacing:.2px}.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08101c;font-weight:900}.nav a{color:var(--muted);text-decoration:none;font-size:.93rem}.hero{padding:54px 0 32px;text-align:center}.eyebrow{display:inline-block;border:1px solid #4c4a87;background:#181b3a;color:#cfcaff;border-radius:99px;padding:6px 12px;font-size:.82rem}.hero h1{font-size:clamp(2.2rem,7vw,4.3rem);line-height:1.05;letter-spacing:-.05em;margin:20px auto 14px;max-width:850px}.gradient{background:linear-gradient(90deg,#b6aaff,#63f0dc);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:640px;margin:0 auto;color:var(--muted);font-size:1.05rem}.searchbox{display:flex;gap:8px;max-width:620px;margin:26px auto 0;background:#11182a;border:1px solid var(--line);border-radius:15px;padding:7px}.searchbox input{width:100%;min-width:0;background:transparent;border:0;outline:0;color:var(--text);padding:10px;font:inherit}.searchbox button,.btn{border:0;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07101b;font-weight:800;padding:11px 16px;cursor:pointer;text-decoration:none;display:inline-block}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:34px 0 16px}.section-head h2{margin:0;font-size:1.4rem}.section-head p{margin:3px 0 0;color:var(--muted);font-size:.9rem}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.filter{border:1px solid var(--line);background:#10182a;color:var(--muted);border-radius:99px;padding:8px 13px;cursor:pointer}.filter.active{background:#e7e4ff;color:#171334;border-color:#e7e4ff;font-weight:700}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.tool{border:1px solid var(--line);background:linear-gradient(155deg,rgba(24,36,60,.96),rgba(13,20,36,.96));border-radius:18px;padding:18px;display:flex;flex-direction:column;min-height:230px}.tooltop{display:flex;align-items:center;gap:11px}.toolicon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#263250;font-size:1.3rem}.tool h3{margin:0;font-size:1.05rem}.tool .category{font-size:.8rem;color:#bdb5ff}.tool p{color:var(--muted);font-size:.92rem;margin:14px 0 18px}.toolbottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}.tag{font-size:.75rem;color:#8ef0d8;background:#123a3b;padding:4px 8px;border-radius:99px}.visit{font-size:.88rem;font-weight:700;text-decoration:none;color:#d4ceff}.visit:hover{text-decoration:underline}.empty{display:none;color:var(--muted);padding:28px 0}.submit{margin:44px 0 25px;padding:25px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(110deg,#171a3a,#102d36);display:flex;justify-content:space-between;align-items:center;gap:20px}.submit h2{margin:0 0 6px}.submit p{margin:0;color:var(--muted)}footer{border-top:1px solid var(--line);margin-top:36px;padding:24px 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.note{color:var(--muted);font-size:.82rem;margin:12px 0 0}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:35px}.submit{align-items:flex-start;flex-direction:column}}
-@media(max-width:480px){.grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.nav{padding:14px 0}.hero h1{font-size:2.55rem}.searchbox button{padding:10px 12px}}
+*{box-sizing:border-box}
+:root{--bg:#080d1b;--panel:#121b30;--line:#293650;--text:#f5f6ff;--muted:#aab6d0;--purple:#a99bff;--mint:#5ce4d0}
+body{margin:0;background:radial-gradient(ellipse at top right,#25225a,transparent 40%),var(--bg);color:var(--text);font-family:system-ui,Arial,sans-serif;line-height:1.55}
+.wrap{width:min(1080px,92%);margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{display:flex;gap:10px;align-items:center;font-size:20px;font-weight:850}
+.logo{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--mint));color:#101126}
+a{color:inherit}
+header>a{color:var(--muted);text-decoration:none}
+.hero{text-align:center;padding:45px 0 30px}
+.pill{display:inline-block;border:1px solid #514d88;background:#191a39;color:#d9d3ff;border-radius:30px;padding:6px 12px;font-size:13px}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.08;letter-spacing:-2px;margin:20px 0}
+.grad{background:linear-gradient(90deg,#c3b8ff,#60ead7);background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:auto;color:var(--muted)}
+.search{display:flex;gap:8px;max-width:620px;margin:25px auto}
+input{min-width:0;flex:1;background:#11182a;color:white;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:16px}
+button,.btn{cursor:pointer;border:0;border-radius:11px;padding:12px 16px;background:linear-gradient(135deg,var(--purple),var(--mint));color:#101126;font-weight:800}
+.featured{border:1px solid #484477;background:linear-gradient(115deg,#201d48,#12343a);padding:23px;border-radius:20px;margin:20px 0 32px}
+.featured small{color:var(--mint);font-weight:800;letter-spacing:1px}
+.featured h2{margin:8px 0}.featured p{color:var(--muted);margin:0 0 15px}
+h2{font-size:25px}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.muted{color:var(--muted);font-size:14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.filters button{background:#111a2c;color:var(--muted);border:1px solid var(--line);padding:9px 13px}
+.filters button.active{background:#e8e4ff;color:#181434}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{border:1px solid var(--line);background:linear-gradient(145deg,#17223a,#101727);border-radius:17px;padding:17px;display:flex;flex-direction:column;min-height:225px}
+.top{display:flex;align-items:center;gap:11px}
+.icon{display:grid;place-items:center;background:#283452;border-radius:12px;width:44px;height:44px;font-size:22px}
+h3{font-size:17px;margin:0}.category{font-size:13px;color:var(--purple)}
+.card p{color:var(--muted);font-size:14px}
+.bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.tag{font-size:11px;border-radius:20px;background:#123a36;color:#8af0d7;padding:5px 8px}
+.visit{color:#d0c8ff;text-decoration:none;font-size:13px;font-weight:750}
+.visit:hover{text-decoration:underline}
+.empty{display:none;color:var(--muted);padding:25px 0}
+.submit{margin:38px 0 25px;border:1px solid var(--line);border-radius:18px;padding:22px;background:#111a2b}
+.submit p{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:22px 0;margin-top:35px;color:var(--muted);font-size:13px}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:30px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}h1{font-size:42px}.search button{padding:10px}.sectionhead{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body>
-<header class="wrap nav">
-  <div class="brand"><span class="logo">N</span><span>Nexora <span class="gradient">AI</span></span></div>
-  <a href="#directory">Explore tools ↓</a>
+<header class="wrap">
+ <div class="brand"><span class="logo">N</span><span>Nexora <span class="grad">AI</span></span></div>
+ <a href="#tools">Explore tools ↓</a>
 </header>
 <main class="wrap">
-  <section class="hero">
-    <span class="eyebrow">✦ Your AI discovery hub</span>
-    <h1>Find the right AI for <span class="gradient">your next big idea.</span></h1>
-    <p>Explore helpful AI tools for writing, design, video, studying and building. Less searching, more creating.</p>
-    <form class="searchbox" id="searchForm">
-      <input id="search" type="search" placeholder="Search tools or what you want to do…" aria-label="Search AI tools">
-      <button type="submit">Search</button>
-    </form>
-  </section>
-  <section id="directory">
-    <div class="section-head">
-      <div><h2>Explore AI tools</h2><p id="count">A hand-picked starter collection</p></div>
-    </div>
-    <div class="filters" id="filters">
-      <button class="filter active" data-category="All">All tools</button>
-      <button class="filter" data-category="Writing">Writing</button>
-      <button class="filter" data-category="Images">Images</button>
-      <button class="filter" data-category="Video">Video</button>
-      <button class="filter" data-category="Study">Study</button>
-      <button class="filter" data-category="Coding">Coding</button>
-    </div>
-    <div class="grid" id="grid">
-      <article class="tool" data-category="Writing" data-search="chatgpt writing ideas explanations brainstorming assistant">
-        <div class="tooltop"><div class="toolicon">✦</div><div><h3>ChatGPT</h3><span class="category">Writing & ideas</span></div></div>
-        <p>Get help brainstorming, learning, drafting and exploring ideas.</p>
-        <div class="toolbottom"><span class="tag">Free option</span><a class="visit" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Writing" data-search="grammarly grammar proofreading writing clarity">
-        <div class="tooltop"><div class="toolicon">✍️</div><div><h3>Grammarly</h3><span class="category">Writing</span></div></div>
-        <p>Check grammar and make everyday writing clearer.</p>
-        <div class="toolbottom"><span class="tag">Free option</span><a class="visit" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Images" data-search="canva design posters presentations social graphics images">
-        <div class="tooltop"><div class="toolicon">🎨</div><div><h3>Canva</h3><span class="category">Design & images</span></div></div>
-        <p>Create posters, presentations, social posts and visual designs.</p>
-        <div class="toolbottom"><span class="tag">Free option</span><a class="visit" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Images" data-search="adobe firefly image generation creative design">
-        <div class="tooltop"><div class="toolicon">🪄</div><div><h3>Adobe Firefly</h3><span class="category">Image generation</span></div></div>
-        <p>Explore AI-assisted image and design creation from text prompts.</p>
-        <div class="toolbottom"><span class="tag">Plan limits apply</span><a class="visit" href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Video" data-search="capcut video editing captions social video">
-        <div class="tooltop"><div class="toolicon">🎬</div><div><h3>CapCut</h3><span class="category">Video editing</span></div></div>
-        <p>Edit short videos, add captions and prepare content for social media.</p>
-        <div class="toolbottom"><span class="tag">Free features</span><a class="visit" href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Study" data-search="khan academy khanmigo study tutor learning explanations">
-        <div class="tooltop"><div class="toolicon">📚</div><div><h3>Khan Academy</h3><span class="category">Study & learning</span></div></div>
-        <p>Learn school subjects with lessons and practice resources.</p>
-        <div class="toolbottom"><span class="tag">Free learning</span><a class="visit" href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Coding" data-search="github code projects collaboration developer tools">
-        <div class="tooltop"><div class="toolicon">💻</div><div><h3>GitHub</h3><span class="category">Coding & projects</span></div></div>
-        <p>Store code, learn from public projects and collaborate with others.</p>
-        <div class="toolbottom"><span class="tag">Free plan</span><a class="visit" href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Writing" data-search="perplexity research answers sources search">
-        <div class="tooltop"><div class="toolicon">🔎</div><div><h3>Perplexity</h3><span class="category">Research</span></div></div>
-        <p>Research questions and explore answers with linked sources.</p>
-        <div class="toolbottom"><span class="tag">Free option</span><a class="visit" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-      <article class="tool" data-category="Video" data-search="runway ai video generation creative video">
-        <div class="tooltop"><div class="toolicon">🌠</div><div><h3>Runway</h3><span class="category">AI video</span></div></div>
-        <p>Experiment with AI-powered video creation and editing tools.</p>
-        <div class="toolbottom"><span class="tag">Credits/limits apply</span><a class="visit" href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Visit tool ↗</a></div>
-      </article>
-    </div>
-    <p class="empty" id="empty">No tools found. Try another search or category.</p>
-    <p class="note">Tool features and free-plan limits can change. Check each official website before relying on a feature.</p>
-  </section>
-  <section class="submit">
-    <div><h2>Know a useful AI tool?</h2><p>Help us grow the directory by suggesting a tool for review.</p></div>
-    <a class="btn" href="mailto:nexoraai.directory@example.com?subject=AI%20tool%20suggestion">Suggest a tool ↗</a>
-  </section>
+<section class="hero">
+ <span class="pill">✦ Your AI discovery hub</span>
+ <h1>Your next big idea<br>starts with <span class="grad">AI.</span></h1>
+ <p>Discover useful AI tools for creativity, learning, work and business. Find the right tool and spend more time creating.</p>
+ <form class="search" id="searchForm">
+  <input id="search" placeholder="Search tools or tasks..." aria-label="Search tools">
+  <button type="submit">Search</button>
+ </form>
+</section>
+
+<section class="featured">
+ <small>✦ FEATURED TOOL</small>
+ <h2>ChatGPT</h2>
+ <p>Brainstorm ideas, learn new concepts, draft content and get help with everyday tasks.</p>
+ <a class="btn" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Explore ChatGPT ↗</a>
+</section>
+
+<section id="tools">
+ <div class="sectionhead"><div><h2>Explore AI tools</h2><p class="muted" id="count">Discover tools by category</p></div></div>
+ <div class="filters" id="filters">
+  <button class="active" data-cat="All">All tools</button>
+  <button data-cat="Writing">Writing</button>
+  <button data-cat="Images">Images</button>
+  <button data-cat="Video">Video</button>
+  <button data-cat="Study">Study</button>
+  <button data-cat="Coding">Coding</button>
+  <button data-cat="Business">Business</button>
+ </div>
+ <div class="grid" id="grid">
+  <article class="card" data-cat="Writing" data-search="chatgpt writing ideas assistant learning questions">
+   <div class="top"><div class="icon">✦</div><div><h3>ChatGPT</h3><span class="category">Writing & ideas</span></div></div>
+   <p>Brainstorm, learn, draft content and explore new ideas.</p>
+   <div class="bottom"><span class="tag">Free option</span><a class="visit" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Writing" data-search="perplexity research search sources questions answers">
+   <div class="top"><div class="icon">🔎</div><div><h3>Perplexity</h3><span class="category">Research</span></div></div>
+   <p>Explore research questions with answers and linked sources.</p>
+   <div class="bottom"><span class="tag">Free option</span><a class="visit" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Writing" data-search="grammarly grammar spelling proofreading writing">
+   <div class="top"><div class="icon">✍️</div><div><h3>Grammarly</h3><span class="category">Writing</span></div></div>
+   <p>Check grammar and improve the clarity of your writing.</p>
+   <div class="bottom"><span class="tag">Free option</span><a class="visit" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Images" data-search="canva design posters logos presentations graphics">
+   <div class="top"><div class="icon">🎨</div><div><h3>Canva</h3><span class="category">Design</span></div></div>
+   <p>Create posters, presentations, logos and social media graphics.</p>
+   <div class="bottom"><span class="tag">Free option</span><a class="visit" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Images" data-search="adobe firefly generate images creative design">
+   <div class="top"><div class="icon">🪄</div><div><h3>Adobe Firefly</h3><span class="category">Image creation</span></div></div>
+   <p>Experiment with AI-assisted image generation and design.</p>
+   <div class="bottom"><span class="tag">Limits may apply</span><a class="visit" href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Images" data-search="remove bg remove background images photos">
+   <div class="top"><div class="icon">🖼️</div><div><h3>remove.bg</h3><span class="category">Photo editing</span></div></div>
+   <p>Remove backgrounds from images for designs and product photos.</p>
+   <div class="bottom"><span class="tag">Usage limits</span><a class="visit" href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Video" data-search="capcut edit video captions reels shorts">
+   <div class="top"><div class="icon">🎬</div><div><h3>CapCut</h3><span class="category">Video editing</span></div></div>
+   <p>Edit videos and create content for social media.</p>
+   <div class="bottom"><span class="tag">Free features</span><a class="visit" href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Video" data-search="runway ai video generation creation editing">
+   <div class="top"><div class="icon">🌠</div><div><h3>Runway</h3><span class="category">AI video</span></div></div>
+   <p>Explore AI-powered video creation and editing tools.</p>
+   <div class="bottom"><span class="tag">Credits may apply</span><a class="visit" href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Study" data-search="khan academy school learning mathematics science">
+   <div class="top"><div class="icon">📚</div><div><h3>Khan Academy</h3><span class="category">Learning</span></div></div>
+   <p>Study school subjects through lessons and practice resources.</p>
+   <div class="bottom"><span class="tag">Free learning</span><a class="visit" href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Study" data-search="quillbot paraphrase summarize grammar study writing">
+   <div class="top"><div class="icon">📝</div><div><h3>QuillBot</h3><span class="category">Writing & study</span></div></div>
+   <p>Explore paraphrasing, summarizing and writing assistance.</p>
+   <div class="bottom"><span class="tag">Free option</span><a class="visit" href="https://quillbot.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Coding" data-search="github code software projects developers">
+   <div class="top"><div class="icon">💻</div><div><h3>GitHub</h3><span class="category">Coding</span></div></div>
+   <p>Host code, explore projects and collaborate with developers.</p>
+   <div class="bottom"><span class="tag">Free plan</span><a class="visit" href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Coding" data-search="replit build code apps web development">
+   <div class="top"><div class="icon">🧩</div><div><h3>Replit</h3><span class="category">Build apps</span></div></div>
+   <p>Experiment with coding and building applications in a browser.</p>
+   <div class="bottom"><span class="tag">Plan limits</span><a class="visit" href="https://replit.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Business" data-search="hubspot crm marketing sales business">
+   <div class="top"><div class="icon">📈</div><div><h3>HubSpot</h3><span class="category">Business</span></div></div>
+   <p>Manage customer relationships, sales and marketing activities.</p>
+   <div class="bottom"><span class="tag">Free tools</span><a class="visit" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+  <article class="card" data-cat="Business" data-search="notion notes organization workspace productivity">
+   <div class="top"><div class="icon">📋</div><div><h3>Notion</h3><span class="category">Productivity</span></div></div>
+   <p>Organize notes, plans, documents and project information.</p>
+   <div class="bottom"><span class="tag">Free plan</span><a class="visit" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">Visit ↗</a></div>
+  </article>
+ </div>
+ <p class="empty" id="empty">No matching tools. Try a different search or category.</p>
+ <p class="muted">Plans, features and usage limits can change. Check each official website for current details.</p>
+</section>
+<section class="submit">
+ <h2>Know a useful AI tool?</h2>
+ <p>Have a suggestion? Help us make Nexora AI more useful.</p>
+ <a href="mailto:nexoraai.directory@example.com?subject=AI%20tool%20suggestion">Suggest a tool by email ↗</a>
+ <p class="muted">Note: Replace the example email address with a real contact address before promoting this feature.</p>
+</section>
 </main>
-<footer class="wrap"><span>© 2026 Nexora AI · Independent directory concept</span><span>Built to help people discover useful tools.</span></footer>
+<footer class="wrap">© 2026 Nexora AI · Independent AI tools directory</footer>
 <script>
-const search = document.getElementById('search');
-const cards = [...document.querySelectorAll('.tool')];
-const buttons = [...document.querySelectorAll('.filter')];
-const count = document.getElementById('count');
-const empty = document.getElementById('empty');
-let category = 'All';
+const search=document.getElementById('search');
+const cards=[...document.querySelectorAll('.card')];
+const buttons=[...document.querySelectorAll('.filters button')];
+const count=document.getElementById('count');
+const empty=document.getElementById('empty');
+let category='All';
 function update(){
-  const term = search.value.trim().toLowerCase();
-  let visible = 0;
-  cards.forEach(card => {
-    const matchesCategory = category === 'All' || card.dataset.category === category;
-    const matchesTerm = (card.innerText + ' ' + card.dataset.search).toLowerCase().includes(term);
-    const show = matchesCategory && matchesTerm;
-    card.style.display = show ? 'flex' : 'none';
-    if(show) visible++;
-  });
-  count.textContent = `${visible} tool${visible===1?'':'s'} found`;
-  empty.style.display = visible ? 'none' : 'block';
+ const term=search.value.trim().toLowerCase();
+ let shown=0;
+ cards.forEach(card=>{
+  const okCat=category==='All'||card.dataset.cat===category;
+  const okText=(card.innerText+' '+card.dataset.search).toLowerCase().includes(term);
+  card.style.display=okCat&&okText?'flex':'none';
+  if(okCat&&okText)shown++;
+ });
+ count.textContent=shown+' tool'+(shown===1?'':'s')+' found';
+ empty.style.display=shown?'none':'block';
 }
-buttons.forEach(button => button.addEventListener('click', () => {
-  category = button.dataset.category;
-  buttons.forEach(b => b.classList.toggle('active', b === button));
-  update();
+buttons.forEach(button=>button.addEventListener('click',()=>{
+ category=button.dataset.cat;
+ buttons.forEach(b=>b.classList.toggle('active',b===button));
+ update();
 }));
-document.getElementById('searchForm').addEventListener('submit', event => {event.preventDefault(); update();});
-search.addEventListener('input', update);
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();update()});
+search.addEventListener('input',update);
 update();
 </script>
 </body>
-</html>
+                                                                      </html>
+                                                          
